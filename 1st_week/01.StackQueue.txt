@@ -1,0 +1,82 @@
+스택/큐
+
+1. 스택 stack
+    - 쌓아 올린 형태의 자료구조
+    - 프로그래밍에서 목록 혹은 리스트에서 접근이 한 쪽에서만 가능한 구조
+    - 삽입하는 연산 = push
+    - 가장 마지막에 넣은 데이터 추출/삭제하는 연산 = pop
+    - 시간 순서에 따라 자료가 쌓여서 가장 마지막에 삽입된 자료가 가장 먼저 삭제됨
+    - LIFO: Last-in, First-out
+    - 가장 마지막에 삽입된 데이터만 확인 가능, 확인하는 함수 = peek
+
+    1) python에서 스택의 구현 방법
+        - 일반적 구현: 직접 구현, 이미 구현된 클래스 import, list를 스택으로 구현
+        - 파이썬은 list가 스택으로 사용 가능하도록 이미 구현되어 있음
+        a. 직접 구현
+            # list를 가진 클래스 선언
+                class Stack(list):
+
+                push = list.append
+
+                def peek(self):
+                    return self[-1]
+
+        b. list 이용
+            s = []
+            s.append(1)
+            s.append(5)
+            s.append(10)
+
+            print('my stack is: ', s)
+            print('popped value is: ', s.pop())
+            print('my stack is: ', s)
+
+            print('peeked value is: ', s[-1])
+            print('my stack is: ', s)
+                
+            * pop은 파이썬 내에서 list의 내장함수로 이미 존재
+
+    2) 스택의 활용
+        - 이전 페이지, 다음 페이지
+        - 깊이 우선 탐색(DFS)
+
+2. 큐 queue
+    - 줄선 형태의 자료구조
+    - 프로그래밍에서 목록 혹은 리스트에서 양쪽에서 접근이 가능한 구조
+    - 먼저 들어온 자료가 먼저 나감 = FIFO(First-in, First-out)
+    - 스택과 달리 삭제연산만 수행되는 곳, 삽입연산만 수행되는 곳 나뉘어 있다.
+    - 대표 함수: put(삽입), peek(가장 먼저 들어간 데이터 확인), get(가장 먼저 들어간 데이터 추출/삭제)
+
+    1) python에서 큐의 구현 방법
+        - 일반적 구현: 직접 구현, 이미 구현된 클래스 import, list를 큐로 구현
+        a. 직접 구현
+            # list를 가진 클래스 선언
+                class Queue(list):
+
+                put = list.append
+
+                def peek(self):
+                    return self[0]     
+
+                def get(self):
+                    return self.pop(0)
+        
+        b. 구현된 클래스 import
+            from queue import Queue
+
+        c. list를 큐로 활용
+            q = []
+            q.append(1)
+            q.append(5)
+            q.append(10)
+
+            print('my stack is: ', q)
+            print('popped value is: ', q.pop())
+            print('my stack is: ', q)
+
+            print('peeked value is: ', q[0])
+            print('my stack is: ', q)
+
+    2) 큐의 활용
+        - 프린터 인쇄 대기열
+
