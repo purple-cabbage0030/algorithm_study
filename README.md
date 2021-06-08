@@ -16,3 +16,10 @@ taking basic steps 🐾
               solution 👉 <a href="">click here</a>
              </ol>
  </details>
+
+
+ <details>
+            <summary>2. Second week - Brute Force & Binary Search </summary>
+             - practicing with quiz<br>
+
+ </details>
