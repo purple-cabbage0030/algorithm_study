@@ -14,3 +14,4 @@ def solution(a, b):
             answer = answer + i
     
     return answer
+    
